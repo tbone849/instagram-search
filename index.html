@@ -9,16 +9,19 @@
 	<script type="text/javascript" src="https://code.angularjs.org/1.4.5/angular-animate.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </head>
-<body>
+<body ng-controller="searchFormController">
 	<header>
 		<div id="search">Search</div>
 		<div id="instagram">Instagram</div>
 	</header>
 	<section class="search">
-		<form name="tagSearch" ng-controller="searchFormController" ng-submit="submit()">
+		<form name="tagSearch" ng-submit="submit()">
 			<input type="text" placeholder="Enter a tag to search" name="tag" ng-model="tag" autocomplete="off" class="tag" required/>
 			<button type="submit" class="submit">Submit</button>
 		</form>
+	</section>
+	<section>
+		<a ng-repeat="result in results" ng-href="{{result.link}}"><img ng-src="{{result.images.low_resolution.url}}"/></a>
 	</section>
 </body>
 </html>
