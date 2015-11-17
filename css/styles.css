@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "groovy baby";
+  src: url("groovy baby.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "akka";
+  src: url("akka.ttf") format("truetype");
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	background-color: #734d26;
+}
+
+header {
+	width: 33em;
+	margin: 2em auto;
+}
+
+header #search {
+	color: #ff531a;
+	font-family: 'groovy baby', arial;
+	font-size: 2em;
+	margin-bottom: -1.25em;
+}
+
+header #instagram {
+	font-family: 'akka', cursive;
+	font-size: 6em;
+	background: #ff3232; /* Old browsers */
+    background: -webkit-linear-gradient(#ff3232 0%, #ff9328 44%, #ffff00 100%);
+    background: -o-linear-gradient(#ff3232 0%, #ff9328 44%, #ffff00 100%);
+    background: linear-gradient(#ff3232 0%, #ff9328 44%, #ffff00 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#ffff00',GradientType=0 ); /* IE6-9 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
