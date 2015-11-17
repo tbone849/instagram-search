@@ -21,13 +21,13 @@ header {
 
 header #search {
 	color: #ff531a;
-	font-family: 'groovy baby', arial;
+	font-family: 'groovy baby', cursive;
 	font-size: 2em;
 	margin-bottom: -1.25em;
 }
 
 header #instagram {
-	font-family: 'akka', cursive;
+	font-family: 'akka', arial;
 	font-size: 6em;
 	background: #ff3232; /* Old browsers */
     background: -webkit-linear-gradient(#ff3232 0%, #ff9328 44%, #ffff00 100%);
@@ -36,4 +36,30 @@ header #instagram {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#ffff00',GradientType=0 ); /* IE6-9 */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.search {
+	text-align: center;
+}
+
+.tagsearch {
+	font-family: 'groovy baby', cursive;
+	font-size: 1.25em;
+	padding: .5em;
+	width: 12em;
+	border: none;
+	-webkit-border-radius: .75em;
+	border-radius: .75em;
+}
+
+.submit {
+	color: #734d26;
+	font-family: 'groovy baby', cursive;
+	font-size: 1.25em;
+	border: none;
+	padding: .5em;
+	background-color: #ff9328;
+	-webkit-border-radius: .75em;
+	border-radius: .75em;
+	cursor: pointer;
 }
