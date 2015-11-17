@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="instagramSearchApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Instagram Search</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-messages.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.4.5/angular-animate.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
@@ -14,8 +15,8 @@
 		<div id="instagram">Instagram</div>
 	</header>
 	<section class="search">
-		<form>
-			<input type="text" placeholder="Enter a tag to search" name="tagsearch" ng-model="tagsearch" autocomplete="off" class="tagsearch" required/>
+		<form name="tagSearch" ng-controller="searchFormController" ng-submit="submit()">
+			<input type="text" placeholder="Enter a tag to search" name="tag" ng-model="tag" autocomplete="off" class="tag" required/>
 			<button type="submit" class="submit">Submit</button>
 		</form>
 	</section>
