@@ -1,7 +1,7 @@
 angular.module('instagramSearchApp', ['ngMessages', 'ngAnimate'])
 	.controller('searchFormController', ['$scope', '$http', '$timeout', function($scope, $http, $timeout){
-		$scope.tag = '';
 		$scope.tagInput = '';
+		$scope.tagCopy = '';
 		$scope.results = [];
 		$scope.foundError = false;
 		$scope.foundResults = false;
@@ -16,7 +16,8 @@ angular.module('instagramSearchApp', ['ngMessages', 'ngAnimate'])
 
 		$scope.submit = function(){
 			$scope.foundResults = false;
-			$scope.tag = $scope.tagInput.split(' ').join('');
+			$scope.tagCopy = angular.copy($scope.tagInput);
+			var tag = $scope.tagInput.split(' ').join('');
 			console.log($scope.tag);
 			var params = {
 				callback: 'JSON_CALLBACK',
@@ -25,7 +26,7 @@ angular.module('instagramSearchApp', ['ngMessages', 'ngAnimate'])
 				scope: 'public_content'
 			}
 			$http({
-				url: 'https://api.instagram.com/v1/tags/' + $scope.tag + '/media/recent',
+				url: 'https://api.instagram.com/v1/tags/' + tag + '/media/recent',
 				method: 'JSONP',
 				params: params
 			})

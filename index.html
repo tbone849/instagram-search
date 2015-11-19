@@ -21,7 +21,7 @@
 		</form>
 	</section>
 	<section class="results">
-		<h2 ng-if="foundResults">We found {{results.length}} results for the tag "{{tag}}".</h2>
+		<h2 ng-if="foundResults">We found {{results.length}} results for the tag "{{tagCopy}}".</h2>
 		<h2 ng-if="foundError">There was an error. Only use letters and numbers. Please try again.</h2>
 		<a ng-if="foundResults" class="links" ng-repeat="result in results" ng-href="{{result.link}}"><img class='image' ng-src="{{result.images.low_resolution.url}}" width="250"/></a>
 	</section>
